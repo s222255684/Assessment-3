@@ -1,0 +1,125 @@
+/* Global page text change */
+* {
+  font-family: "Barlow";
+}
+/* Sets the colours of the text and background to what I want */
+body {
+  color: white;
+  background-color: rgb(123, 44, 191);
+}
+/* Wrapper that wraps around every pages divs */
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Style for the header that is seen on every page */
+.header {
+  position: fixed;
+  left: 5rem;
+  right: 2rem;
+  z-index: 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* Style for the main block that is seen on every page */
+.other {
+  position: fixed;
+  left: 5rem;
+  right: 2rem;
+  top: 7rem;
+  z-index: 0;
+  bottom: 1rem;
+  overflow: auto;
+}
+/*Styling for the title */
+.header #title {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* Block changes how the blocks interact and look with each other */
+.block {
+  padding: 1.5rem;
+  border-radius: 15px;
+  background: rgb(0, 0, 0, 0.3);
+}
+/* Sidebar styles which are static 
+    Its height is auto to fit your screen,
+    it will always stay on the left,
+    it slides in with a transition,
+    it remains on the top layer thanks to z-index 100
+*/
+.sidebar {
+  color: white;
+  background-color: rgb(102, 51, 153);
+
+  height: auto;
+  float: left;
+  position: absolute;
+  border-radius: 0px 15px 15px 0px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0.5em;
+  text-align: center;
+  transition: 0.3s ease;
+
+  display: inline-flex;
+  flex-direction: column;
+  z-index: 100;
+}
+/* Styling for hamburger button */
+.hamburger {
+  position: absolute;
+  left: 0.4em;
+  padding: 0.3em;
+  transition: 0.2s linear;
+}
+/* Makes cursor change when hovering over the icon */
+.hamburger:hover {
+  cursor: pointer;
+}
+/* When pressed it will give it a backgroun colour */
+.hamburger:active {
+  background-color: gray;
+  border-radius: 30px;
+}
+/* Rotates the button 90 degrees */
+.rotate {
+  transform: rotate(90deg);
+  transition: 0.2s linear;
+}
+/* Positions and changes how the links will look on the sidebar */
+.link {
+  display: fixed;
+  align-items: center;
+  padding: 0.4em;
+  border-radius: 0.25em;
+  height: 1.5em;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  text-align: center;
+  margin-top: 2em;
+}
+/* When hovering on a link it will have a background */
+.link:hover {
+  background-color: gray;
+}
+/* When you click on a link it will change colour again */
+.link:active {
+  background-color: rgb(87, 82, 82);
+}
+/* Displays the logo on the lower half of the sidebar */
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+}
+/* Determines how the icons in place of the links look when the sidebar is collapsed */
+.link .icon {
+  flex-shrink: 0;
+  width: 25px;
+  margin-right: 10px;
+}
